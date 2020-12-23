@@ -11,7 +11,7 @@ const Main = () => {
     <div className='p-3 md:p-10'>
         <SelectRing ringNumber={ringNumber} setRingNumber={setRingNumber} />
         <Radius radius={radius} setRadius={setRadius} />
-        <Result ring={ringNumber} radius={radius}/>
+        <Result ring={ringNumber} radius={parseFloat(radius)}/>
     </div>
   )
 }
