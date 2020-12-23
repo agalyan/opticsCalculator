@@ -30,7 +30,7 @@ const Results = ({ radius, ring }) => {
   return (
     <div className='px-5 py-3 text-center bg-white'>
       <div className='border-b-2 font-medium my-3 pb-4 text-2xl'>{`Результаты`}</div>
-      <ResultRow title='2h' value={hh} />
+      <ResultRow title='2h' value={hh || 0} />
       <ResultRow title='Выпуклое' value={h1 || 0} />
       <ResultRow title='Вогнутое' value={h2 || 0} />
     </div>

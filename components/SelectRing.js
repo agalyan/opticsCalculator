@@ -11,7 +11,7 @@ const SelectRing = ({ ringNumber, setRingNumber }) => {
   return (
     <div className='px-5 py-3 text-center bg-white'>
       <span className='block font-medium mb-5 text-2xl'>{`Размер кольца:`}</span>
-      {rings.map(ring => <span className='inline-flex flex-col mx-5 font-medium' key={ring}>
+      {rings.map(ring => <span className='inline-flex flex-col mx-2 md:mx-5 font-medium' key={ring}>
         <input className='w-7 h-7' type="radio"
           value={ring}
           checked={ringNumber == ring}
