@@ -3,7 +3,7 @@ import radiuses from '../configs/radius.json'
 import ResultRow from './ResultRow';
 
 const calcRadiusZero = (r, ro, R) => r + (ro * ro * r) / (2 * (R * R - r * r));
-const calcHH = (rZero, R) => R > rZero ? R - Math.sqrt(R * R - rZero * rZero) : 0;
+const calcHH = (rZero, R) => R > rZero ? 2*(R - Math.sqrt(R * R - rZero * rZero)) : 0;
 const calcH1 = (r, ro, R) => (R + ro) - Math.sqrt((R + ro) * (R + ro) - r * r);
 const calcH2 = (r, ro, R) => (R - ro) - Math.sqrt((R - ro) * (R - ro) - r * r);
 
