@@ -7,7 +7,7 @@ const calcHH = (rZero, R) => R > rZero ? 2*(R - Math.sqrt(R * R - rZero * rZero)
 const calcH1 = (r, ro, R) => (R + ro) - Math.sqrt((R + ro) * (R + ro) - r * r);
 const calcH2 = (r, ro, R) => (R - ro) - Math.sqrt((R - ro) * (R - ro) - r * r);
 
-const Results = ({ radius, ring }) => {
+const Results = ({ radius, ring, version="new" }) => {
 
   const [R0, setR0] = useState('');
   const [hh, setHH] = useState('');
@@ -15,7 +15,7 @@ const Results = ({ radius, ring }) => {
   const [h2, setH2] = useState('');
 
   const calcResults = () => {
-    const { r, ro } = radiuses[ring];
+    const { r, ro } = radiuses[version][ring];
     console.log('r: ', r);
     console.log('ro: ', ro);
 
@@ -28,7 +28,7 @@ const Results = ({ radius, ring }) => {
 
   useEffect(() => {
     calcResults();
-  }, [radius, ring]);
+  }, [radius, ring, version]);
 
   return (
     <div className='px-5 py-3 text-center bg-white'>
